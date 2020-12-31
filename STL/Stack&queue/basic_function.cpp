@@ -31,7 +31,8 @@ int main(){
 	st.pop();  //this will delete last element of stack
 	cout<<"Top elements after delete:"<<st.top()<<endl;
 
-	queue<int> qu;
+	queue<int> qu;  //declaring queue
+	dequeue<int> dqu;
 
 	//Adding elements in queue:
 
@@ -39,7 +40,18 @@ int main(){
 	qu.push(9);
 	qu.push(6);
 	qu.push(4);
-
+	
+	//Adding elements in dequeue
+	dqu.push_front(3);   //Adding at front
+	dqu.push_back(4);    //Adding at back
+	dqu.push_back(0);
+	dqu.push_front(5);
+	
+	cout<<"dequeue last element:"<<dqu.front()<<endl;
+	
+	dqu.pop_front();	//Remove first element;
+	cout<<"dequeue last element after pop operation:"<<dqu.front()<<endl;
+	
 	//print first element:
 
 	cout<<"Queue front element:"<<qu.front()<<endl;
